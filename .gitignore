@@ -1,11 +1,4 @@
-"Number Guedding Game"/guessing_game.exe
-calculator.exe
-clock.exe
-Progress_Bar/progress.exe
-user_management.exe
-user_management_without_termios_header_file.exe
-sudoku.exe
-tic_tac_toe.c
+
 *.exe
 simple.c
 simple.exe
