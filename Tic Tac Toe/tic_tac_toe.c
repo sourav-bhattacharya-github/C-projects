@@ -36,7 +36,7 @@ int main()
     printf("\nPlay again? (1 for yes, 0 for no): ");
     scanf("%d", &choice);
   } while (choice == 1);
-  printf("Bye by ethanks for playing.");
+  printf("\nBye by ethanks for playing.\n\n");
 
   return 0;
 }
@@ -206,6 +206,7 @@ void play_game()
     if (check_draw(board))
     {
       score.draw++;
+      show_bord(board);
       printf("It's a draw!");
       break;
     }
@@ -232,6 +233,7 @@ void player_move(char board[BOARD_SIZE][BOARD_SIZE], char player)
   if (count == 1)
   {
     board[last_i][last_j] = player;
+    return;
   }
 
   int row, col;
