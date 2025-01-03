@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> // for clear the screen
+// #include <stdlib.h> // for clear the screen
 #include <string.h>
 
 #define MAX_BUSES 10
@@ -26,14 +26,79 @@ Bus buses[MAX_BUSES];
 Users user[MAX_USER];
 int user_count = 0;
 
+/**
+ * @brief Initializes the buses with default values.
+ *
+ * This function sets the bus ID, bus name, and initializes all seats to available (0)
+ * and names to empty strings.
+ */
 void initialize_buses();
+
+/**
+ * @brief Displays the main menu and gets the user's choice.
+ *
+ * @return int The choice entered by the user.
+ */
 int show_menu();
+
+/**
+ * @brief Registers a new user.
+ *
+ * This function takes the user's credentials, checks if the user already exists,
+ * and if not, registers the user.
+ */
 void user_registration();
+
+/**
+ * @brief Logs in an existing user.
+ *
+ * This function takes the user's credentials, checks if they are valid,
+ * and if so, logs the user in and displays their booked tickets.
+ */
 void user_login();
+
+/**
+ * @brief Books a ticket for a logged-in user.
+ *
+ * This function allows a logged-in user to book a ticket by selecting a bus ID
+ * and seat number. It checks if the seat is available and books it if so.
+ */
 void book_ticket();
+
+/**
+ * @brief Cancels a ticket for a logged-in user.
+ *
+ * This function allows a logged-in user to cancel a ticket by selecting a bus ID
+ * and seat number. It checks if the seat is booked by the user and cancels it if so.
+ */
 void cancel_ticket();
+
+/**
+ * @brief Checks the status of a bus.
+ *
+ * This function displays the status of a bus, including the bus ID, bus name,
+ * and the availability of each seat.
+ */
 void check_bus_status();
-void input_credential(char *username, char *password);
+
+/**
+ * @brief Takes user input for credentials.
+ *
+ * This function prompts the user to enter their username and password.
+ *
+ * @param username Pointer to a character array to store the username.
+ * @param password Pointer to a character array to store the password.
+ */
+
+/**
+ * @brief Checks if a user exists.
+ *
+ * This function checks if a user with the given username and password exists.
+ *
+ * @param username Pointer to a character array containing the username.
+ * @param password Pointer to a character array containing the password.
+ * @return int The index of the user if they exist, -1 otherwise.
+ */
 int is_exist(char *username, char *password);
 
 int main()
